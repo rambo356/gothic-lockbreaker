@@ -1,6 +1,0 @@
-node_modules/
-dist/
-*.exe
-*.zip
-*.log
-.DS_Store
