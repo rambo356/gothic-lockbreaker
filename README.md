@@ -1,60 +1,28 @@
-# Gothic Lockbreaker — Desktop App v109 / 1.0.6
+# Gothic Lockbreaker
 
-Electron-проект для сборки Windows-приложения.
+Standalone lockpicking calculator for **Gothic 1 Remake**.
 
-Изменение v109:
-- окно приложения теперь открывается на всю доступную высоту монитора;
-- ширина остаётся нормальной — до 1280 px, по центру экрана;
-- кнопка `Рассчитать решение` должна быть заметнее без лишнего скролла.
+Gothic Lockbreaker helps players calculate a safe A/D lockpicking sequence by manually setting pin positions and plate links.
 
-Что внутри:
-- `index.html` — приложение;
-- `main.js` — Electron-обёртка;
-- `package.json` — настройки сборки;
-- `hero-image.png` — картинка верхнего блока;
-- `favicon.png` / `favicon.ico` — иконка;
-- `.bat` файлы для установки, запуска и сборки.
+This is an external helper tool.  
+It does **not** modify game files, saves, configs, memory, or executable files.
 
-## Как собрать
+## Features
 
-1. Установи Node.js LTS: https://nodejs.org/
+- Supports 4–7 plates
+- Manual pin positions
+- Manual plate links
+- Shortest safe A/D sequence
+- English, Russian and German UI
+- Standalone Electron desktop app
 
-2. Распакуй архив в папку без кириллицы, например:
+## Requirements
 
-```text
-C:\Projects\gothic-lockbreaker-desktop-app-v109-screen-height
-```
+- Windows 10 / 11
+- Node.js LTS
+- npm
 
-3. Установи зависимости:
+## Install dependencies
 
-```text
-01-install-dependencies.bat
-```
-
-4. Проверь приложение:
-
-```text
-02-run-app.bat
-```
-
-5. Собери установщик:
-
-```text
-03-build-installer.bat
-```
-
-6. Собери portable:
-
-```text
-04-build-portable.bat
-```
-
-7. Собери обе версии сразу:
-
-```text
-05-build-installer-and-portable.bat
-```
-
-Готовые файлы будут в папке `dist`:
-- `Gothic-Lockbreaker-Setup-1.0.6.exe`
-- `Gothic-Lockbreaker-Portable-1.0.6.exe`
+```bash
+npm install
