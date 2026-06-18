@@ -1,0 +1,53 @@
+{
+  "name": "gothic-lockbreaker",
+  "version": "1.0.6",
+  "description": "Desktop lockpicking calculator for Gothic 1 Remake",
+  "main": "main.js",
+  "author": "Dmitry Gerasimov",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis",
+    "dist:portable": "electron-builder --win portable",
+    "dist:all": "electron-builder --win nsis portable"
+  },
+  "build": {
+    "appId": "com.dmitrygerasimov.gothiclockbreaker",
+    "productName": "Gothic Lockbreaker",
+    "copyright": "Copyright © 2026 Dmitry Gerasimov",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "main.js",
+      "hero-image.png",
+      "favicon.png",
+      "favicon.ico"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "favicon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Gothic Lockbreaker",
+      "artifactName": "Gothic-Lockbreaker-Setup-${version}.${ext}",
+      "uninstallDisplayName": "Gothic Lockbreaker"
+    },
+    "portable": {
+      "artifactName": "Gothic-Lockbreaker-Portable-${version}.${ext}"
+    }
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  }
+}
